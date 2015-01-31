@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         uglify: {
             options: {
@@ -7,7 +8,7 @@ module.exports = function(grunt) {
                 sourceMap: "dist/ng-emoticon.map"
             },
             target: {
-                src: "ng-emoticon.js",
+                src: "ng-emoticons.js",
                 dest: "dist/ng-emoticon.min.js"
             }
         },
@@ -27,14 +28,9 @@ module.exports = function(grunt) {
                 unused: true
             },
             target: {
-                src: "ng-emoticon.js"
-
+                src: "ng-emoticons.js"
             }
         }
     });
-
-    grunt.loadNpmTasks("grunt-contrib-uglify");
-    grunt.loadNpmTasks("grunt-contrib-cssmin");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.registerTask('default', ["jshint","uglify","cssmin"]);
 };

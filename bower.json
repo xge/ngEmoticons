@@ -1,12 +1,13 @@
 {
   "name": "ngEmoticons",
-  "version": "0.2.1",
-  "homepage": "https://github.com/ritz078/ngEmoticons",
+  "version": "1.0.0",
+  "homepage": "https://github.com/xge/ngEmoticons",
   "authors": [
-    "Ritesh Kumar <rkritesh078@gmail.com>"
+    "Hagen <spam@xgerdax.de>"
   ],
   "description": "An angularjs filter for converting text into emoticons.",
   "main": ["./ng-emoticons.js","./ng-emoticons.css"],
+  "private": true,
   "keywords": [
     "ngEmoticons",
     "emoticons",
@@ -21,7 +22,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2",
+    "angular": "~1.3",
     "angular-sanitize": "~1.3"
   }
 

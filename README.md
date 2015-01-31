@@ -43,6 +43,12 @@ HTML:
 <div ng-bind-html="text | linky:'_blank' | emoticons"></div>
 ```
 
+Version 1.0.0
+=============
++ forked [ngEmoticons by Ritesh Kumar](https://github.com/ritz078/ngEmoticons)
++ upgraded bower and npm dependencies
++ added custom smileys
+
 Version 0.2.0
 =============
 Using font instead of images provided by icomoon.

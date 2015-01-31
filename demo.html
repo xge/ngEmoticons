@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ngEmoticons</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="ng-emoticons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+<body ng-app="ngEmoticonApp" ng-controller="ngEmoticonCtrl">
+    <div class="container"><div class="row"><div class="col-xs-12">
+        <h2>ngEmoticons</h2>
+        <p>This is just to showcase all available emoticons and their css classes.</p>
+        <div class="well" ng-bind-html="text | emoticons"></div>
+        <table class="table" ng-cloak>
+            <thead>
+                <tr>
+                    <th>Text</th>
+                    <th>Smiley</th>
+                    <th>Class</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(key, value) in smileys">
+                    <td>{{ key }}</td>
+                    <td ng-bind-html="key | emoticons"></td>
+                    <td><code>icon-{{ value }}</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div></div></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.3.11/angular-sanitize.min.js"></script>
+<script src="ng-emoticons.js"></script>
+<script src="demo/js/app.js"></script>
+
+</html>

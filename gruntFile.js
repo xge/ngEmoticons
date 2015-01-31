@@ -20,10 +20,11 @@ module.exports = function(grunt) {
         		ext:".min.css"
         	}
         },
-         jshint: {
+        jshint: {
             options: {
-                eqeqeq: false,
                 curly: true,
+                eqeqeq: false,
+                laxbreak: true,
                 undef: false,
                 unused: true
             },

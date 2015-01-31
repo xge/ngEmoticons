@@ -4,6 +4,13 @@
 * Description
 */
 angular.module('ngEmoticonApp', ['ngSanitize','ngEmoticons'])
-.controller('ngEmoticonCtrl', ['$scope', function($scope){
-	$scope.text="Lorem ipsum http://www.google.com  ^_^ :s </3 :D (^) :) :( ;) :P (y) :D :/ <3 3:) 8| :o -_-  dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat rem atque est in";
+.controller('ngEmoticonCtrl', ['$scope', 'SMILEYS', function($scope, SMILEYS) {
+    $scope.smileys = SMILEYS;
+	$scope.text = "Lorem ipsum :D dolor sit amet ;), consectetur adipisicing elit, sed do eiusmod" +
+            "tempor incididunt ut labore et dolore magna 8-) aliqua. Ut enim ad minim veniam," +
+            "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo" +
+            "consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse" +
+            "cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non" +
+            "proident, sunt in culpa qui officia deserunt mollit anim id est laborum." +
+            "(y) (y) (y)";
 }]);

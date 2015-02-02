@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             },
             target: {
                 src: "ng-emoticons.js",
-                dest: "dist/ng-emoticon.min.js"
+                dest: "dist/ng-emoticons.min.js"
             }
         },
         cssmin:{

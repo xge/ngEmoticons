@@ -29,21 +29,15 @@ ngEmoticons.constant('SMILEYS', {
 });
 ngEmoticons.filter('emoticons', ['SMILEYS', function(SMILEYS) {
     return function (input) {
-        var patterns = [],
-            metachars = /[[\]{}()*+?.\\|^$\-,&#\s]/g;
-
-        // build a regex pattern for each defined property
-        for (var i in SMILEYS) {
-            if (SMILEYS.hasOwnProperty(i)){ // escape metacharacters
-                patterns.push('(' + i.replace(metachars, "\\$&") + ')');
+        var tokens = input.split(' ');
+        var result = [];
+        angular.forEach(tokens, function (token) {
+            if(angular.isDefined(SMILEYS[token])) {
+                result.push('<i class="icon icon-' + SMILEYS[token] + '"></i>');
+            } else {
+                result.push(token);
             }
-        }
-
-        // build the regular expression and replace
-        return input.replace(new RegExp(patterns.join('|'),'g'), function (match) {
-            return typeof SMILEYS[match] != 'undefined'
-                ? '<i class="icon icon-' + SMILEYS[match] + '"></i>'
-                : match;
         });
+        return result.join(' ');
     };
 }]);

@@ -13,7 +13,7 @@
     <div class="container"><div class="row"><div class="col-xs-12">
         <h2>ngEmoticons</h2>
         <p>This is just to showcase all available emoticons and their css classes.</p>
-        <div class="well" ng-bind-html="text | emoticons"></div>
+        <pre class="well" ng-bind-html="text | linky:'_blank' | emoticons"></pre>
         <table class="table" ng-cloak>
             <thead>
                 <tr>
